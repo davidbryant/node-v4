@@ -1,5 +1,5 @@
 {
-  "name": "@types/db-node-v4",
+  "name": "@types/node",
   "version": "4.6.0",
   "description": "TypeScript definitions for Node.js v4.x",
   "license": "MIT",
