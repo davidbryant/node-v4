@@ -2200,3 +2200,26 @@ declare module "constants" {
     export var X_OK: number;
     export var UV_UDP_REUSEADDR: number;
 }
+
+declare module "v8" {
+
+    export interface IHeapStatistics {
+        total_heap_size: number;
+        total_heap_size_executable: number;
+        total_physical_size: number;
+        total_available_size: number;
+        used_heap_size: number;
+        heap_size_limit: number;
+    }
+
+    export interface IHeapSegmentStatistics {
+        space_name: string;
+        space_size: number;
+        space_used_size: number;
+        space_available_size: number;
+        physical_space_size: number;
+    }
+
+    export function getHeapStatistics(): IHeapStatistics;
+    export function getHeapSpaceStatistics(): IHeapSegmentStatistics[];
+}
